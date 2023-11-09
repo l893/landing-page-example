@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Playfair_Display';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Regular.woff2')
+      format('woff2'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair_Display';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Medium.woff2')
+      format('woff2'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-Medium.woff') format('woff'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-Medium.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair_Display';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-SemiBold.woff2')
+      format('woff2'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-SemiBold.woff')
+      format('woff'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-SemiBold.ttf')
+      format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova/ProximaNova-Regular.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova/ProximaNova-Semibold.woff2') format('woff2'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant_Garamond';
+  src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.woff2')
+      format('woff2'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.woff')
+      format('woff'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant_Garamond';
+  src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Medium.woff2')
+      format('woff2'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-Medium.woff')
+      format('woff'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf')
+      format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant_Garamond';
+  src: url('../fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.woff2')
+      format('woff2'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.woff')
+      format('woff'),
+    url('../fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf')
+      format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit/Outfit-Regular.woff2') format('woff2'),
+    url('../fonts/Outfit/Outfit-Regular.woff') format('woff'),
+    url('../fonts/Outfit/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit/Outfit-SemiBold.woff2') format('woff2'),
+    url('../fonts/Outfit/Outfit-SemiBold.woff') format('woff'),
+    url('../fonts/Outfit/Outfit-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

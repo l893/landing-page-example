@@ -1,0 +1,41 @@
+{
+  "name": "assembly",
+  "version": "1.0.0",
+  "description": "Lawyer",
+  "private": true,
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "author": "Vertu9tif <l_893@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "core-js": "^3.21.0",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.6",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.1.3",
+    "vanilla-lazyload": "^17.5.0"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  }
+}

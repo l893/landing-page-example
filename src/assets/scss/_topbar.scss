@@ -1,0 +1,61 @@
+@use '_variables';
+@use '_mixins';
+
+.topbar {
+  background: variables.$color3;
+  height: variables.$topbarHeight;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 996;
+
+  border-bottom: 1px solid variables.$color2;
+}
+
+.topbar_flex {
+  display: flex;
+  align-items: center;
+}
+
+.topbar__inner-wrap_flex {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 575.98px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.topbar.topbar-scrolled {
+  top: -(variables.$topbarHeight);
+}
+
+.topbar__contact-info_flex {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 575.98px) {
+    justify-content: center;
+
+    margin: 0.5rem 0;
+  }
+}
+
+.topbar__icon {
+  color: variables.$color1;
+  padding-right: 0.5rem;
+  margin-left: 1.5rem;
+  line-height: 0;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.topbar__link {
+  line-height: 1;
+  color: variables.$color5;
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    color: variables.$color1;
+  }
+}

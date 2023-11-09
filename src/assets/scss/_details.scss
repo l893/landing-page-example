@@ -1,0 +1,475 @@
+@use '_variables';
+@use '_mixins';
+
+.details {
+  .row {
+    @media screen and (max-width: 575.98px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .details__title {
+    position: relative;
+    z-index: 4;
+    margin-bottom: 1rem;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 98px;
+      height: 1px;
+      background-color: variables.$color5;
+      left: 400px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 1399.98px) {
+      &::after {
+        left: 370px;
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      &::after {
+        width: 78px;
+        left: 360px;
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      &::after {
+        width: 60px;
+        left: 320px;
+      }
+    }
+
+    @media screen and (max-width: 575.98px) {
+      &::after {
+        left: 250px;
+      }
+    }
+
+    @media screen and (max-width: 479.98px) {
+      &::after {
+        width: 1px;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .details__cross {
+    position: relative;
+    z-index: 4;
+    margin-bottom: 2rem;
+  }
+
+  .details__content {
+    position: relative;
+    z-index: 4;
+
+    background-color: variables.$color3;
+    padding: 2rem 1rem;
+
+    @media screen and (max-width: 767.98px) {
+      padding: 1rem;
+    }
+
+    border-radius: 0.75rem;
+    border: 1px solid variables.$color1;
+
+    // ! (дублирование для блоков с аккордеонами без табов [т.е. для блоков с одним раскрывающимся списком, а не с, н-р, тремя на разных вкладках])
+    .accordion {
+      .accordion-item {
+        .accordion-body {
+          padding: 1rem 1.25rem;
+
+          @media screen and (max-width: 991.98px) {
+            padding: 1rem;
+          }
+
+          @media screen and (max-width: 575.98px) {
+            padding: 0.25rem 1rem 1rem 1rem;
+          }
+
+          @media screen and (max-width: 479.98px) {
+            padding: 0.25rem 0.5rem 1rem 0.5rem;
+          }
+        }
+
+        .accordion-button {
+          &:focus {
+            border-color: variables.$color1;
+            box-shadow: 0 0 0 0.25rem rgba(187, 159, 100, 0.25);
+          }
+        }
+
+        .accordion-button:not(.collapsed) {
+          color: variables.$color2;
+          background-color: rgba(31, 39, 50, 0.1);
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+          }
+        }
+      }
+    }
+
+    .h4 {
+      color: variables.$color3;
+      font-weight: variables.$fontWeightMedium;
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+    }
+
+    .small-paragraph {
+      padding: 0 1.5rem;
+
+      @media screen and (max-width: 479.98px) {
+        padding: 0 1rem;
+      }
+    }
+
+    .details__content-list {
+      margin-left: 0.5rem;
+
+      @media screen and (max-width: 479.98px) {
+        margin-left: 0;
+      }
+
+      .details__content-list-item {
+        .small-paragraph {
+          padding: 0 0 0 0.5rem;
+          margin-bottom: 1.5rem;
+
+          @media screen and (max-width: 991.98px) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        &::marker {
+          color: variables.$color1;
+        }
+      }
+    }
+
+    .wrap-btn {
+      text-align: center;
+    }
+
+    // !
+
+    .nav-tabs {
+      border-bottom: 1px solid variables.$color1;
+    }
+
+    .nav {
+      .nav-item {
+        display: flex;
+        justify-content: center;
+
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          margin-right: 0;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          &:last-child {
+            .nav-link {
+              border-radius: 0;
+              border-top-left-radius: 0.25rem;
+              border-top-right-radius: 0.25rem;
+            }
+          }
+        }
+
+        .nav-link {
+          @media screen and (max-width: 767.98px) {
+            border-radius: 0.25rem;
+          }
+        }
+
+        .nav-link:not(.active) {
+          border: 1px solid variables.$color5;
+
+          &:hover {
+            border-color: variables.$color1;
+          }
+        }
+
+        .nav-link.active {
+          color: variables.$color4;
+          background-color: variables.$color5;
+          border-color: variables.$color1;
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        .accordion {
+          .accordion-item {
+            .accordion-body {
+              padding: 1rem 1.25rem;
+
+              @media screen and (max-width: 991.98px) {
+                padding: 1rem;
+              }
+
+              @media screen and (max-width: 575.98px) {
+                padding: 0.25rem 1rem 1rem 1rem;
+              }
+
+              @media screen and (max-width: 479.98px) {
+                padding: 0.25rem 0.5rem 1rem 0.5rem;
+              }
+            }
+
+            .accordion-button {
+              &:focus {
+                border-color: variables.$color1;
+                box-shadow: 0 0 0 0.25rem rgba(187, 159, 100, 0.25);
+              }
+            }
+
+            .accordion-button:not(.collapsed) {
+              color: variables.$color2;
+              background-color: rgba(31, 39, 50, 0.1);
+
+              &::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+              }
+            }
+          }
+        }
+
+        .h4 {
+          color: variables.$color3;
+          font-weight: variables.$fontWeightMedium;
+          text-align: center;
+          margin: 1rem 0 2rem 0;
+        }
+
+        .small-paragraph {
+          padding: 0 1.5rem;
+
+          @media screen and (max-width: 479.98px) {
+            padding: 0 1rem;
+          }
+        }
+
+        .details__content-list {
+          margin-left: 0.5rem;
+
+          @media screen and (max-width: 479.98px) {
+            margin-left: 0;
+          }
+
+          .details__content-list-item {
+            .small-paragraph {
+              padding: 0 0 0 0.5rem;
+              margin-bottom: 1.5rem;
+
+              @media screen and (max-width: 991.98px) {
+                margin-bottom: 1rem;
+              }
+            }
+
+            &::marker {
+              color: variables.$color1;
+            }
+          }
+        }
+
+        .wrap-btn {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.avto-lawyer {
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/avto_background.jpg');
+  background-image: url('../images/homePage/avto_background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  vertical-align: middle;
+}
+
+.medical {
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/medical-bg1.jpg');
+  background-image: url('../images/homePage/medical-bg1.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  vertical-align: middle;
+
+  .details__title {
+    &::after {
+      left: 810px;
+    }
+
+    @media screen and (max-width: 1399.98px) {
+      &::after {
+        left: 740px;
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      &::after {
+        width: 78px;
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.debt {
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/debt-bg.jpg');
+  background-image: url('../images/homePage/debt-bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  vertical-align: middle;
+
+  .details__title {
+    &::after {
+      left: 560px;
+    }
+
+    @media screen and (max-width: 1399.98px) {
+      &::after {
+        left: 510px;
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      &::after {
+        width: 78px;
+        left: 510px;
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      &::after {
+        width: 60px;
+        left: 460px;
+      }
+    }
+
+    @media screen and (max-width: 575.98px) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.insurance {
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/insurance-bg.jpg');
+  background-image: url('../images/homePage/insurance-bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  vertical-align: middle;
+
+  .details__title {
+    &::after {
+      left: 400px;
+    }
+
+    @media screen and (max-width: 1399.98px) {
+      &::after {
+        left: 365px;
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      &::after {
+        width: 78px;
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      &::after {
+        width: 60px;
+        left: 330px;
+      }
+    }
+
+    @media screen and (max-width: 575.98px) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.land-plot {
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/landPlot.jpg');
+  background-image: url('../images/homePage/landPlot.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  vertical-align: middle;
+
+  .details__title {
+    &::after {
+      left: 600px;
+    }
+
+    @media screen and (max-width: 1399.98px) {
+      &::after {
+        left: 550px;
+      }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      &::after {
+        width: 78px;
+      }
+    }
+
+    @media screen and (max-width: 991.98px) {
+      &::after {
+        width: 60px;
+        left: 500px;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use '_variables';
+@use '_mixins';
+
+.hero {
+  .row {
+    @media screen and (max-width: 575.98px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  display: flex;
+  align-items: center;
+
+  background-color: variables.$color3;
+  background-image: url('../images/homePage/hero5.jpg');
+  background-image: url('../images/homePage/hero5.webp');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  transition: all 0.3s ease-in-out 0s;
+
+  vertical-align: middle;
+  position: relative;
+}
+
+.hero__title_position {
+  z-index: 4;
+  text-align: center;
+  position: relative;
+}

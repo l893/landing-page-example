@@ -1,0 +1,114 @@
+@use 'sass:math';
+@use '_variables';
+@use '_mixins';
+@use '_hero';
+@use '_services';
+@use '_details';
+
+body {
+  background: variables.$color3;
+  font-family: variables.$fontFamily2;
+  font-style: normal;
+
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: variables.$color5;
+  }
+}
+
+::selection {
+  color: variables.$color6;
+  background: variables.$color1;
+}
+
+.container {
+  padding: 0;
+
+  @media (min-width: 1400px) and (max-width: 1920.98px) {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 3.5rem 0;
+  }
+}
+
+.footer {
+  padding: 5rem 0;
+
+  @media screen and (max-width: 991.98px) {
+    padding: 3.5rem 0;
+  }
+
+  @media screen and (max-width: 479.98px) {
+    padding: 7rem 0;
+  }
+}
+
+.overlay {
+  background: variables.$color3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  z-index: 2;
+}
+
+.overlay-light {
+  background: variables.$color6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  z-index: 2;
+}
+
+// honeypot
+.contact-form .contact_contact {
+  display: none;
+  visibility: hidden;
+}
+
+.header {
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 997;
+  top: variables.$topbarHeight;
+}
+
+.header.header-scrolled {
+  top: 0;
+}
+
+/*lazy loading*/
+.loading {
+  background: url('../images/Spinner-1s-200px.gif') center / 50px no-repeat;
+}

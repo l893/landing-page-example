@@ -1,0 +1,21 @@
+# remove .html at the end of the address
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+	RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+	RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+	RewriteCond %{REQUEST_fileNAME} !-d
+	RewriteCond %{REQUEST_fileNAME} !-f
+	RewriteRule (.*) /$1.html
+</IfModule>
+
+# архивация указанных в mime type файлов при помощи mod_deflate
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+# https://content-security-policy.com/
+<IfModule mod_headers.c>
+	Header set Content-Security-Policy "default-src 'none'; base-uri 'self'; font-src 'self'; manifest-src 'self'; style-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; worker-src 'none'; child-src 'none'"
+</IfModule>

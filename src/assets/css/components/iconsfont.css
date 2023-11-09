@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('../../fonts/iconsfont/icomoon.ttf?gyjaaj') format('truetype'),
+    url('../../fonts/iconsfont/icomoon.woff?gyjaaj') format('woff'),
+    url('../../fonts/iconsfont/icomoon.svg?gyjaaj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-black-minus:before {
+  content: "\e900";
+}
+._icon-black-plus:before {
+  content: "\e901";
+}
+._icon-bx-minus:before {
+  content: "\e902";
+}
+._icon-bx-plus:before {
+  content: "\e903";
+}
+._icon-angle-up:before {
+  content: "\e904";
+}
+._icon-arrow-right:before {
+  content: "\e905";
+}
+._icon-arrow-up:before {
+  content: "\e906";
+}
+._icon-arrow-up-circle:before {
+  content: "\e907";
+}
+._icon-arrow-up-short:before {
+  content: "\e908";
+}
+._icon-arrow-up-square:before {
+  content: "\e909";
+}
+._icon-bxs-chevron-up:before {
+  content: "\e90a";
+}
+._icon-bx-up-arrow-alt:before {
+  content: "\e90b";
+}
+._icon-call:before {
+  content: "\e90c";
+}
+._icon-chevron-compact-up:before {
+  content: "\e90d";
+}
+._icon-chevron-right:before {
+  content: "\e90e";
+}
+._icon-chevron-up:before {
+  content: "\e90f";
+}
+._icon-chevron-up-light:before {
+  content: "\e910";
+}
+._icon-easel:before {
+  content: "\e911";
+}
+._icon-envelope:before {
+  content: "\e912";
+}
+._icon-facebook:before {
+  content: "\e913";
+}
+._icon-house:before {
+  content: "\e914";
+}
+._icon-instagram:before {
+  content: "\e915";
+}
+._icon-linkedin:before {
+  content: "\e916";
+}
+._icon-planet-earth:before {
+  content: "\e917";
+}
+._icon-play:before {
+  content: "\e918";
+}
+._icon-quote_left:before {
+  content: "\e919";
+}
+._icon-quote_right:before {
+  content: "\e91a";
+}
+._icon-search:before {
+  content: "\e91b";
+}
+._icon-stairs:before {
+  content: "\e91c";
+}
+._icon-star:before {
+  content: "\e91d";
+}
+._icon-stationery:before {
+  content: "\e91e";
+}
+._icon-twitter:before {
+  content: "\e91f";
+}

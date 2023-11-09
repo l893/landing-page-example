@@ -1,0 +1,157 @@
+@use '_variables';
+@use '_mixins';
+
+.h1 {
+  @include mixins.textFontStyles(85px, 106, 85, variables.$color5);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightMedium;
+
+  @media screen and (max-width: 1399.98px) {
+    @include mixins.textFontStyles(75px, 93, 75, variables.$color5);
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    @include mixins.textFontStyles(67px, 85, 67, variables.$color5);
+  }
+
+  @media screen and (max-width: 991.98px) {
+    @include mixins.textFontStyles(57px, 75, 57, variables.$color5);
+  }
+
+  @media screen and (max-width: 767.98px) {
+    @include mixins.textFontStyles(45px, 58, 45, variables.$color5);
+  }
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(41px, 50, 41, variables.$color5);
+  }
+
+  @media screen and (max-width: 479.98px) {
+    @include mixins.textFontStyles(38px, 45, 38, variables.$color5);
+  }
+}
+
+.h2 {
+  @include mixins.textFontStyles(65px, 80, 65, variables.$color5);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+
+  @media screen and (max-width: 1399.98px) {
+    @include mixins.textFontStyles(55px, 68, 55, variables.$color5);
+  }
+
+  @media screen and (max-width: 991.98px) {
+    @include mixins.textFontStyles(47px, 58, 47, variables.$color5);
+  }
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(34px, 42, 34, variables.$color5);
+  }
+
+  @media screen and (max-width: 374.98px) {
+    @include mixins.textFontStyles(32px, 38, 32, variables.$color5);
+  }
+}
+
+.h3 {
+  @include mixins.textFontStyles(45px, 55, 45, variables.$color5);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+
+  @media screen and (max-width: 1399.98px) {
+    @include mixins.textFontStyles(41px, 52, 41, variables.$color5);
+  }
+
+  @media screen and (max-width: 991.98px) {
+    @include mixins.textFontStyles(37px, 45, 37, variables.$color5);
+  }
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(28px, 37, 28, variables.$color5);
+  }
+
+  @media screen and (max-width: 374.98px) {
+    @include mixins.textFontStyles(26px, 34, 26, variables.$color5);
+  }
+}
+
+.h4 {
+  @include mixins.textFontStyles(28px, 32, 28, variables.$color5);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+
+  @media screen and (max-width: 1399.98px) {
+    @include mixins.textFontStyles(26px, 30, 26, variables.$color5);
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    @include mixins.textFontStyles(24px, 28, 24, variables.$color5);
+  }
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(22px, 26, 22, variables.$color5);
+  }
+
+  @media screen and (max-width: 374.98px) {
+    @include mixins.textFontStyles(20px, 24, 20, variables.$color5);
+  }
+}
+
+.h5 {
+  @include mixins.textFontStyles(23px, 27, 23, variables.$color2);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+}
+
+.h6 {
+  @include mixins.textFontStyles(18px, 22, 18, variables.$color2);
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+}
+
+.medium-paragraph {
+  @include mixins.textFontStyles(19px, 27, 19, variables.$color5);
+
+  font-family: variables.$fontFamily2;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+  letter-spacing: 0.01em;
+}
+
+.small-paragraph {
+  @include mixins.textFontStyles(16px, 25, 16, variables.$color3);
+
+  font-family: variables.$fontFamily2;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+  letter-spacing: 0.01em;
+}
+
+.p {
+  @include mixins.textFontStyles(22px, 33, 22, variables.$color5);
+
+  font-family: variables.$fontFamily2;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+  letter-spacing: 0.01em;
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(20px, 30, 20, variables.$color5);
+  }
+
+  @media screen and (max-width: 374.98px) {
+    @include mixins.textFontStyles(17px, 26, 17, variables.$color5);
+  }
+}

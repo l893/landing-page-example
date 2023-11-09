@@ -1,0 +1,185 @@
+@use '_variables';
+@use '_mixins';
+@use '_topbar';
+
+.navbar {
+  background: transparent;
+  padding: 1.25rem 0;
+
+  transition: all 0.3s ease-in-out 0s;
+
+  @media screen and (max-width: 575.98px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    max-height: 100vh;
+    overflow-y: scroll;
+
+    background: variables.$color3;
+    border-bottom: 1px solid variables.$color2;
+  }
+}
+
+.navbar__brand {
+  @include mixins.textFontStyles(40px, 50, 40, variables.$color5);
+
+  &:hover {
+    color: variables.$color1;
+  }
+
+  font-family: variables.$fontFamily1;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+
+  @media screen and (max-width: 991.98px) {
+    @include mixins.textFontStyles(36px, 45, 36, variables.$color5);
+  }
+
+  @media screen and (max-width: 575.98px) {
+    @include mixins.textFontStyles(32px, 40, 32, variables.$color5);
+
+    margin: 0 0 0 1.5rem;
+  }
+
+  @media screen and (max-width: 374.98px) {
+    margin: 0;
+  }
+}
+
+.header-scrolled {
+  .navbar {
+    background: variables.$color3;
+    border-bottom: 1px solid variables.$color2;
+  }
+}
+
+.navbar__collapse {
+  justify-content: flex-end;
+
+  transition: all 0.3s ease-in-out 0s;
+
+  @media screen and (max-width: 991.98px) {
+    text-align: center;
+  }
+}
+
+.navbar-nav__item {
+  margin: 0 0 0 3rem;
+
+  @media screen and (max-width: 1199.98px) {
+    margin: 0 0 0 2rem;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    margin: 0 0 1.8rem 0;
+  }
+
+  &:first-child {
+    margin: 0;
+
+    @media screen and (max-width: 991.98px) {
+      margin: 1.8rem 0 1.8rem 0;
+    }
+  }
+
+  &:last-child {
+    margin: 0 0 0 2rem;
+
+    @media screen and (max-width: 1199.98px) {
+      margin: 0 0 0 1.5rem;
+    }
+
+    @media screen and (max-width: 991.98px) {
+      margin: 0;
+    }
+  }
+}
+
+.navbar-nav__link {
+  display: inline-block;
+
+  @include mixins.textFontStyles(20px, 25, 20, variables.$color5);
+
+  font-family: variables.$fontFamily2;
+  font-style: normal;
+  font-weight: variables.$fontWeightRegular;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: variables.$color1;
+  }
+}
+
+.navbar__toggler {
+  z-index: 4;
+
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  @media screen and (max-width: 575.98px) {
+    margin: 0 1.5rem 0 0;
+  }
+
+  @media screen and (max-width: 374.98px) {
+    margin: 0;
+  }
+
+  width: 30px;
+  height: 35px;
+  outline: none;
+}
+
+.navbar__toggler.active .navbar-toggler-icon {
+  background: transparent;
+
+  &::before,
+  &::after {
+    transition: all 0.3s ease-out 0s;
+    top: 0;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+.navbar__toggler .navbar-toggler-icon {
+  background: variables.$color5;
+  transition: all 0.3s ease-out 0s;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: relative;
+
+  &::before,
+  &::after {
+    transition: all 0.3s ease-out 0s;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: variables.$color5;
+    width: 30px;
+    height: 2px;
+    content: '';
+  }
+
+  &::before {
+    top: 7px;
+  }
+
+  &::after {
+    top: -7px;
+  }
+}
